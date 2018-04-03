@@ -18,4 +18,4 @@ phases:
       
   artifacts:
     files:
-      - MyAppBuild
+      - build-pedrops.zip

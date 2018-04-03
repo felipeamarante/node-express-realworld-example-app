@@ -13,6 +13,8 @@ phases:
       - echo Build started on `date`
       - echo Compiling the Node.js code
       - docker build -t pedrops-ecr .
+      - docker tag pedrops-ecr:latest 086256341561.dkr.ecr.us-east-1.amazonaws.com/pedrops-ecr:latest
   post_build:
     commands:
       - echo Build completed on `date`
+      - docker push 086256341561.dkr.ecr.us-east-1.amazonaws.com/pedrops-ecr:latest

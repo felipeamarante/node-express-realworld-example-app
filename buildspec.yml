@@ -16,6 +16,3 @@ phases:
     commands:
       - echo Build completed on `date`
       
-  artifacts:
-    files:
-      - build-pedrops.zip

@@ -1,4 +1,5 @@
-{
+[
+  {
   "taskDefinition": {
     "family": "task-pedrops-node",
     "containerDefinitions": [
@@ -19,3 +20,4 @@
     ]
   }
 }
+  ]

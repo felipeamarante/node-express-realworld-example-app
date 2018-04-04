@@ -1,42 +1,21 @@
 {
-  "containerDefinitions": [
-    {
-      "portMappings": [
-        {
-          "hostPort": 80,
-          "protocol": "tcp",
-          "containerPort": 3000
-        }
-      ],
-      "cpu": 0,
-      "memoryReservation": 512,
-      "volumesFrom": [],
-      "image": "086256341561.dkr.ecr.us-east-1.amazonaws.com/pedrops-ecr:latest",
-      "essential": true,
-      "name": "container-pedrops"
-    }
-  ],
-  "placementConstraints": [],
-  "memory": "1024",
-  "compatibilities": [
-    "EC2"
-  ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:086256341561:task-definition/task-pedrops-node:1",
-  "family": "task-pedrops-node",
-  "requiresAttributes": [
-    {
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-    }
-  ],
-  "requiresCompatibilities": [
-    "EC2"
-  ],
-  "networkMode": "bridge",
-  "cpu": "1024",
-  "revision": 1,
-  "status": "ACTIVE",
-  "volumes": []
+  "taskDefinition": {
+    "family": "task-pedrops-node",
+    "containerDefinitions": [
+      {
+        "name": "container-pedrops",
+        "image": "086256341561.dkr.ecr.us-east-1.amazonaws.com/pedrops-ecr:latest",
+        "cpu": 0,
+        "portMappings": [
+          {
+            "protocol": "tcp",
+            "containerPort": 3000,
+            "hostPort": 80
+          }
+        ],
+        "memory": 1024,
+        "essential": true
+      }
+    ]
+  }
 }

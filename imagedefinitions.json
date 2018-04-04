@@ -1,0 +1,71 @@
+{
+  "executionRoleArn": null,
+  "containerDefinitions": [
+    {
+      "dnsSearchDomains": null,
+      "logConfiguration": null,
+      "entryPoint": null,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "protocol": "tcp",
+          "containerPort": 3000
+        }
+      ],
+      "command": null,
+      "linuxParameters": null,
+      "cpu": 0,
+      "environment": [],
+      "ulimits": null,
+      "dnsServers": null,
+      "mountPoints": [],
+      "workingDirectory": null,
+      "dockerSecurityOptions": null,
+      "memory": null,
+      "memoryReservation": 512,
+      "volumesFrom": [],
+      "image": "086256341561.dkr.ecr.us-east-1.amazonaws.com/pedrops-ecr:latest",
+      "disableNetworking": null,
+      "healthCheck": null,
+      "essential": true,
+      "links": null,
+      "hostname": null,
+      "extraHosts": null,
+      "user": null,
+      "readonlyRootFilesystem": null,
+      "dockerLabels": null,
+      "privileged": null,
+      "name": "container-pedrops"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": "1024",
+  "taskRoleArn": null,
+  "compatibilities": [
+    "EC2"
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:086256341561:task-definition/task-pedrops-node:1",
+  "family": "task-pedrops-node",
+  "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+    }
+  ],
+  "requiresCompatibilities": [
+    "EC2"
+  ],
+  "networkMode": "bridge",
+  "cpu": "1024",
+  "revision": 1,
+  "status": "ACTIVE",
+  "volumes": []
+}

@@ -1,23 +1,20 @@
-[
-  {
-  "taskDefinition": {
-    "family": "task-pedrops-node",
+{
     "containerDefinitions": [
-      {
-        "name": "container-pedrops",
-        "image": "086256341561.dkr.ecr.us-east-1.amazonaws.com/pedrops-ecr:latest",
-        "cpu": 0,
-        "portMappings": [
-          {
-            "protocol": "tcp",
-            "containerPort": 3000,
-            "hostPort": 80
-          }
-        ],
-        "memory": 1024,
-        "essential": true
-      }
-    ]
-  }
+        {
+            "portMappings": [
+                {
+                    "hostPort": 0,
+                    "protocol": "tcp",
+                    "containerPort": 3000
+                }
+            ],
+            "cpu": 0,
+            "memoryReservation": 1024,
+            "image": "086256341561.dkr.ecr.us-east-1.amazonaws.com/pedrops-ecr:latest",
+            "essential": true,
+            "name": "container-pedrops",
+            }
+    ],
+    "family": "task-pedrops-node",
+    "networkMode": "bridge"
 }
-  ]

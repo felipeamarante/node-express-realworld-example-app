@@ -1,7 +1,6 @@
-[
-    {
-      
-            "image": "086256341561.dkr.ecr.us-east-1.amazonaws.com/pedrops-ecr:latest",
-            "name": "container-pedrops",
-}
+[  
+   {  
+      "image":"086256341561.dkr.ecr.us-east-1.amazonaws.com/pedrops-ecr:latest",
+      "name":"container-pedrops"
+   }
 ]

@@ -1,6 +1,6 @@
 [  
    {  
       "imageUri":"httpd:latest",
-      "name":"container-pedrops"
+      "name":"simple-app"
    }
 ]
